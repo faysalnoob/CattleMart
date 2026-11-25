@@ -1,0 +1,24 @@
+Validation date: 2026-11-26
+Release rebuild: succeeded (0 errors, 0 warnings).
+
+PASS: fresh database schema and repeated setup
+PASS: salted password hash and wrong-password rejection
+PASS: existing database password compatibility
+PASS: phone validation
+PASS: names with spaces
+PASS: missing and invalid images
+PASS: binary image survives disposed source stream
+PASS: duplicate account rejected
+PASS: detail screen displays chosen ID rather than first animal
+PASS: checkout persists correct animal, customer and amounts
+PASS: ordered animal removed from availability
+PASS: duplicate checkout rolls back without duplicate order
+PASS: farmer order list ownership filter
+PASS: other farmer cannot see order
+PASS: admin order list
+PASS: all database-backed list screens construct without exceptions
+PASS: category excludes sold animals and other animal types
+PASS: confirmation button stays inside window
+PASS: reports persist
+PASS: checkout rejects missing customer session
+PASSED 20 regression checks.

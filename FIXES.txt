@@ -1,0 +1,25 @@
+Changes made
+- Repaired two missing resource references using existing bundled icons. Original missing artwork was not present in the ZIP.
+- Removed hardcoded machine-specific SQL connection; added configuration and idempotent fresh database setup.
+- Fixed duplicate cattle INSERT execution and duplicate SQL parameters.
+- Added positive decimal/range validation, correct Camel support and farmer ownership on uploads.
+- Fixed byte-array image display, empty/corrupt image handling and disposed-stream image lifetime.
+- Fixed item details to use the selected CattleID instead of SELECT TOP 1.
+- Connected Cow Buy, Camel View / Buy and detail Back buttons; added Buffalo browsing for uploaded buffalo.
+- Removed overlapping unused cow search field; fixed search to stay in the cow category and use explicit numeric casts.
+- Fixed registration validation, field focus, duplicate registration handling and premature success notification.
+- Added salted password hashing for new registrations and admin creation; protected password/PIN fields.
+- Handled admin database login errors and preserved actual logged-in user across farmer navigation.
+- Fixed premature report success notification; success now follows database insertion.
+- Fixed farmer image grid's nonexistent ImagePath lookup.
+- Replaced empty / incorrect order lists with stored order data; farmer lists are filtered by ownership.
+- Added atomic demo order creation and duplicate-sale protection. No real payment integration is claimed.
+- Fixed mobile number length and names with spaces, card expiry/security code validation and incomplete Nagad checkout.
+- Moved confirmation button inside window and added a working route back.
+- Fixed hidden form accumulation by closing replaced screens and exiting when the last screen closes.
+- Made data grids read-only, enabled full-row selection and hid password/image byte columns where appropriate.
+- Added delete confirmations and a Back button on credits.
+- Packaged source, runnable build, database schema, admin setup, build script and regression checks.
+
+Validation limits
+The automated suite covers database setup, image decoding, selected item details, order persistence, duplicate checkout, ownership filters, list construction and confirmation control placement. It does not exhaustively click every UI control or test a real payment provider. Production deployment and arbitrary legacy database migrations are outside this validation.
